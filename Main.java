@@ -32,8 +32,6 @@ public class Main {
             case "November":
                 System.out.println("Autumn");
                 break;
-
         }
-
     }
 }
