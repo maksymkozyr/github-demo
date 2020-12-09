@@ -4,34 +4,52 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter a month");
-        String month = br.readLine();
+        Months month = Months.valueOf(br.readLine().toUpperCase());
+
 
         switch (month) {
-            case "December":
-            case "Jenuary":
-            case "February":
-                System.out.println("Winter!");
+            case DECEMBER:
+            case JANUARY:
+            case FEBRUARY:
+                System.out.println("Winter");
                 break;
-            case "March":
-            case "April":
-            case "May":
+            case MARCH:
+            case APRIL:
+            case MAY:
                 System.out.println("Spring");
                 break;
-            case "June":
-            case "July":
-            case "August":
+            case JUNE:
+            case JULY:
+            case AUGUST:
                 System.out.println("Summer");
                 break;
-            case "September":
-            case "October":
-            case "November":
+            case SEPTEMBER:
+            case OCTOBER:
+            case NOVEMBER:
                 System.out.println("Autumn");
                 break;
         }
     }
+}
+
+enum Months {
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    JUNE,
+    JULY,
+    AUGUST,
+    MARCH,
+    APRIL,
+    MAY,
+    DECEMBER,
+    JANUARY,
+    FEBRUARY;
+
 }
